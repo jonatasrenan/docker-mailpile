@@ -1,7 +1,8 @@
 FROM alpine:edge
-MAINTAINER Rafael Römhild <rafael@roemhild.de>
+##MAINTAINER Rafael Römhild <rafael@roemhild.de>
+MAINTAINER Allard van den Brul <allardvdb@altijdaan.nl>
 
-ENV VERSION 0.5.2
+#ENV VERSION 0.5.2
 
 # Install requirements
 RUN apk add --update-cache \
@@ -20,7 +21,7 @@ RUN apk add --update-cache \
 
 # Get Mailpile from github
 RUN git clone https://github.com/mailpile/Mailpile.git \
-        --branch $VERSION --single-branch --depth=1
+        --single-branch --depth=1
 
 WORKDIR /Mailpile
 
